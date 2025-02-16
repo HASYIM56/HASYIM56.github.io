@@ -1,0 +1,221 @@
+/* Adding the custom fonts */
+@font-face {
+    font-family: 'KustomFont';
+    src: url('Espressonal.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KustomFont2';
+    src: url('BabelSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #1B2631; /* Dark blue theme */
+    font-family: Arial, sans-serif;
+    color: #E5E5E5;
+    margin: 0;
+    padding: 0;
+    filter: saturate(200%);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+}
+
+.chat-box {
+    max-height: 700px; /* Increased height */
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chat-bubble {
+    border-radius: 20px;
+    padding: 18px; /* Increased padding */
+    margin: 18px 0; /* Increased margin */
+    max-width: 85%; /* Slightly larger width */
+    font-family: 'KustomFont2', Arial, sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out, bounceIn 0.5s ease-out;
+    position: relative;
+}
+
+.chat-bubble.user {
+    background-color: #1F4D7B; /* Dark blue for user messages */
+    color: white;
+    align-self: flex-end;
+    border-bottom-left-radius: 0;
+    animation: userMessage 1s ease-in-out;
+}
+
+.chat-bubble.ai {
+    background-color: #2C3E50; /* Navy blue for AI messages */
+    color: white;
+    border-bottom-right-radius: 0;
+    display: flex;
+    align-items: center;
+    animation: aiMessage 1s ease-in-out;
+}
+
+.ai-profile-img {
+    width: 60px; /* Slightly larger image size */
+    height: 60px; /* Slightly larger image size */
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.input-box input {
+    width: 85%;
+    padding: 14px;
+    border-radius: 30px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #1F4D7B;
+    outline: none;
+    background-color: #333;
+}
+
+.input-box button {
+    width: 12%;
+    padding: 12px;
+    border-radius: 30px;
+    background-color: #1F4D7B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-box button:hover {
+    background-color: #2C3E50;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Updated creator-text with custom font */
+.creator-text {
+    text-align: center;
+    margin-top: 30px;
+    color: #1F4D7B;
+    font-size: 18px;
+    font-family: 'KustomFont', Arial, sans-serif;
+}
+
+.creator-text a {
+    color: #1F4D7B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.creator-text a:hover {
+    text-decoration: underline;
+}
+
+.typing-notification {
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Add subtle animations */
+.chat-bubble {
+    animation: fadeIn 0.5s ease-in-out, bounceIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes userMessage {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aiMessage {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* New styles for H56 and creator text */
+h1 {
+    font-size: 56px; /* Increased size */
+    font-family: 'KustomFont', Arial, sans-serif;
+    color: #E5E5E5; /* Light grey color */
+    text-shadow: 3px 3px 6px #000000; /* Enhanced black text stroke effect */
+}
+
+p {
+    text-align: center;
+    font-size: 20px; /* Slightly increased size */
+    font-family: 'KustomFont', Arial, sans-serif;
+    color: #E5E5E5;
+}
+
+/* New style for creator's name box */
+.creator-name {
+    background-color: #1F4D7B;
+    padding: 8px 18px;
+    border-radius: 50px;
+    display: inline-block;
+    font-family: 'KustomFont', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}

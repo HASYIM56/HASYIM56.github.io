@@ -1,0 +1,105 @@
+/* Hamburger Menu Icon */
+.hamburger-menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #E5E5E5;
+    z-index: 1000;
+}
+
+.hamburger-menu-icon:hover {
+    color: #1F4D7B;
+}
+
+/* Hamburger Menu Slide In */
+.hamburger-menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    background: #141414; /* Dark background */
+    border-left: 3px solid #1F4D7B; /* Blue line effect on the left */
+    border-right: 3px solid #1F4D7B; /* Blue line effect on the right */
+    backdrop-filter: blur(20px); /* Glassmorphism effect */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect from the side */
+    z-index: 999;
+    transition: left 0.3s ease-in-out;
+    padding-bottom: 20px;
+}
+
+.hamburger-menu.active {
+    left: 0;
+}
+
+.hamburger-menu-content {
+    padding: 20px;
+    color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hamburger-menu h1 {
+    font-size: 32px;
+    font-family: 'KustomFont', Arial, sans-serif;
+    color: #E5E5E5;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Light shadow for text */
+}
+
+.hamburger-menu p {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'KustomFont2', Arial, sans-serif;
+    color: #E5E5E5;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #1F4D7B; /* Blue border for profile image */
+}
+
+/* Powered by OpenAI Section */
+.powered-by {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.powered-by .openai-box {
+    background-color: #1F4D7B; /* Blue background for OpenAI box */
+    padding: 5px 12px;
+    border-radius: 50px; /* Pill shape */
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.openai-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+/* Optional: Add some animation for the sliding effect */
+@keyframes slideIn {
+    0% {
+        left: -300px;
+    }
+    100% {
+        left: 0;
+    }
+}
